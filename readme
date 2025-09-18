@@ -1,0 +1,65 @@
+# KnowledgeHub – AI-Powered Collaborative Notes (MERN + Gemini)
+
+An AI-powered **collaborative knowledge hub** where teams can create, manage, and search documents.  
+Built with **MongoDB, Express.js, React, Node.js** and **Google Gemini AI**.  
+
+Features:
+- Authentication – Email/Password + JWT (user/admin roles)
+- Document Management– Create, edit, delete, summarize, tag
+- AI Integration – Gemini for auto summaries, tags, semantic search, and Q&A
+- Search – Regular text + semantic search
+- Team Q&A – Ask AI questions using stored documents as context
+- Modern UI – Built with React, Vite, Tailwind, and ShadCN
+
+---
+
+## Project Structure
+knowledgehub/
+├── backend/ 
+│ ├── src/
+│ ├── package.json
+│ └── .env.example
+├── frontend/ 
+│ ├── src/
+│ ├── package.json
+│ └── .env.example
+├── .gitignore
+
+
+---
+
+## ⚙Tech Stack
+
+- **Frontend**: React, Vite, TypeScript, TailwindCSS, ShadCN/UI  
+- **Backend**: Node.js, Express.js, MongoDB, JWT  
+- **AI**: Google Gemini API (`generateContent` endpoint for summaries, tags, and Q&A)  
+- **Auth**: JWT with user/admin roles  
+
+---
+
+## Setup Instructions
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/<your-username>/knowledgehub.git
+cd knowledgehub
+cd backend
+npm install
+cp .env.example .env  
+npm run dev
+                            
+env variable
+PORT=4000
+MONGO_URI=your-mongodb-uri
+JWT_SECRET=your-secret
+JWT_EXPIRES_IN=7d
+
+AI_API_KEY=your-gemini-api-key
+AI_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent
+
+#frontend setup
+cd ../frontend
+npm install
+cp .env.example .env  
+npm run dev
+                             
